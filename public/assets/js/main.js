@@ -49,7 +49,14 @@ function nuevoUsuario(e) {
     if(!Object.values(objUser).every(input => input !== '')) {
         imprimirAlerta('Debe llenar todos los campos', 'error');
     } else {
-        agregarUsuario(objUser);
+        const {0: User_user, 1: User_password, 2: User_status_name, 3: Role_name} = objUser;
+        const usuario = {
+            User_user,
+            User_password,
+            User_status_id: 1,
+            Role_id: 2
+        }
+        agregarUsuario(usuario);
     }
 
 }
