@@ -1,4 +1,5 @@
-const url = "http://localhost/Myproject/app/config/db.php"
+const url = "http://localhost/Myproject/app/config/db.php";
+const urlC = "http://localhost/Myproject/app/config/crearUser.php";
 
 export const obtenerUsuarios = async () => {
   try {
@@ -19,6 +20,7 @@ export const agregarUsuario = async (usuario) => {
         'Content-Type': 'application/json'
       }
     })
+    console.log(usuario);
   } catch (error) {
     console.log(error)
   }
